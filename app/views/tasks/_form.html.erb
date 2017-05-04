@@ -1,0 +1,16 @@
+<%= form_for(@task) do |f| %>
+
+  <%= f.label :name, "Type your tast title: " %>
+  <%= f.text_field :name %> <hr>
+
+  <%= f.label :content, "Type your content: " %>
+  <%= f.text_field :content %> <hr>
+
+  <%= f.label :color, "Tag your task with color (red = urgent, orange = to do, blue = hassle-free): " %>
+  <%= f.text_field :color %> <hr>
+
+  <%= f.label :state, "Type 1 if done else 0: " %>
+  <%= f.number_field :state %> <hr>
+
+  <%= f.submit %>
+<% end %>

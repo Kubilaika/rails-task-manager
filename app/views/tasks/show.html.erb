@@ -1,0 +1,8 @@
+<h1><%= @task.name.capitalize %></h1>
+ <p><%= @task.state == 1 ? "[X]" : "[ ]" %></p>
+ <p><%= @task.content.capitalize %></p>
+ <p><%= @task.color %></p>
+
+ <p><%= link_to "editer", edit_task_path(id: @task.id) %> <%= link_to "supprimer", task_path(id: @task.id), method: :delete %></p>
+
+<%= link_to "Revenir à la list des tâches", tasks_path %>

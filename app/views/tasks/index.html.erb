@@ -1,0 +1,13 @@
+<h1>Liste des tâches </h1>
+
+<%= link_to "Ajouter une nouvelle tâche", tasks_new_path %>
+
+<% @tasks.each do |task| %>
+ <h2> <%= link_to task.name.capitalize, task_path(id: task.id) %></h2>
+ <p><%= task.state == 1 ? "[X]" : "[ ]" %></p>
+ <p><%= task.content.capitalize %></p>
+ <p><%= task.color %></p>
+ <p><%= link_to "editer", edit_task_path(id: task.id) %> <%= link_to "supprimer", task_path(id: task.id), method: :delete %></p>
+<% end %>
+
+
